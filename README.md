@@ -1,8 +1,8 @@
-# What is Space Debris?
+# What is Space Cleanup for Kids?
 
 Created by: John Quiruz
 
-"What is Space Debris?" is a website that seeks to spread awareness to the growing problem of space junk accumulating in Earth's orbit.
+**Space Cleanup for Kids** is a website that seeks to spread awareness about the growing problem of space junk accumulating in Earth's orbit. This website is intended for young readers.
 
 ## Features
 
@@ -24,6 +24,12 @@ Created by: John Quiruz
 * [] Milestone 2: Navigation and flexbox layout implementation
 * [] Milestone 3: Javascript form validation and interactivity
 * [] Milestone 4: Complex data handling and animation features
+
+## Notes
+
+- Use class selectors for repeating elements and ID selectors only for unique elements on the page
+  - `class="..."` for many elements
+  - `id="..."` for unique elements
 
 ## License
 This is a personal project created for educational purposes.
