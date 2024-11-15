@@ -20,7 +20,7 @@ Created by: John Quiruz
 
 ## Milestones
 
-* [] Milestone 1: Project setup and initial repository configuration
+* [x] Milestone 1: Project setup and initial repository configuration
 * [] Milestone 2: Navigation and flexbox layout implementation
 * [] Milestone 3: Javascript form validation and interactivity
 * [] Milestone 4: Complex data handling and animation features
