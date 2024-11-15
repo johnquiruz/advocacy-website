@@ -1,8 +1,8 @@
-# What is Space Cleanup for Kids?
+# What is Space Guardians?
 
 Created by: John Quiruz
 
-**Space Cleanup for Kids** is a website that seeks to spread awareness about the growing problem of space junk accumulating in Earth's orbit. This website is intended for young readers.
+**Space Guardians** is a website that seeks to spread awareness about the growing problem of space junk accumulating in Earth's orbit. This website is intended for young readers.
 
 ## Features
 
