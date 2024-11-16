@@ -1,0 +1,19 @@
+body {
+    background: #F6F5F5;
+    color: #070D59;
+    font-family: 'Bubblegum Sans';
+    font-size: 1.5em;
+}
+
+h2 {
+    color: #EE6F57;
+}
+
+p {
+    color: #1F3C88;
+}
+
+img {
+    width: 500px;
+    height: auto;
+}
