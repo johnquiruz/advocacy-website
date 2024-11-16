@@ -13,7 +13,39 @@ p {
     color: #1F3C88;
 }
 
+a {
+    color: #1F3C88;
+}
+
+a:link {}
+
+a:visited {}
+
+a:hover {
+    color: #070D59;
+}
+
+a:active {}
+
 img {
     width: 500px;
     height: auto;
+    border-radius: 10px;
+}
+
+button{}
+
+button#primaryBtn {
+    background: #EE6F57;
+    color: #F6F5F5;
+    font-family: 'Bubblegum Sans';
+    font-size: 0.75em;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+button#primaryBtn:hover {
+    background: #ee6157;
+    cursor: pointer;
 }
