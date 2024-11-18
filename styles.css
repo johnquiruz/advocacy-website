@@ -64,7 +64,7 @@ button#primaryBtn:hover {
 }
 
 .header-container .child:nth-of-type(1) {
-    flex: 0 1 700px;
+    flex: 0 1 400px;
 }
 
 .header-container .child:nth-of-type(2) {
@@ -103,14 +103,19 @@ button#primaryBtn:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background: lightgrey;
-    border-radius: 10px;
-    height: 500px;
 }
 
 .data-container .child {
     align-self: center;
     padding: 0 20px;
+}
+
+.list-background {
+    background: #f6f5f5;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 12px 28px 0px rgba(140, 149, 159, 0.3);
+    margin-bottom: 30px;
 }
 
 .impact-container {
@@ -153,6 +158,7 @@ button#primaryBtn:hover {
 }
 
 .header-container, .about-container, .impact-container {
-    margin: 250px 80px;
+    max-width: 1151px;
+    margin: 350px auto;
     /* background: lightgrey; */
 }
