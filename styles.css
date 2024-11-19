@@ -114,7 +114,7 @@ button:hover {
 .list-background {
     background: #f6f5f5;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     box-shadow: 0px 12px 28px 0px rgba(140, 149, 159, 0.3);
     margin-bottom: 30px;
 }
@@ -286,7 +286,29 @@ button:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.pledge-container .child {
+    border: 2px dashed lightblue;
+    padding: 0 20px;
+    padding-bottom: 20px;
+    margin: 25px 0;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0px 12px 18px 0px rgba(133, 133, 133, 0.171);
+}
+
+.pledge-container .child:nth-of-type(1) {
+    flex: 0 1 500px;
+}
+
+.pledge-container .child:nth-of-type(1) p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.pledge-container .child:nth-of-type(2) {
+    flex: 0 1 500px;
 }
 
 #pledge-button {
@@ -319,6 +341,11 @@ button:hover {
     flex-direction: row;
 }
 
+#checkbox-container .child:nth-of-type(1) {
+    flex: 0 1 1em;
+}
+
 #checkbox-container .child:nth-of-type(2) {
     padding-top: 11px;
+    flex: 1 1 auto;
 }
