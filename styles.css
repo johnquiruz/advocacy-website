@@ -19,15 +19,9 @@ a {
     color: #1F3C88;
 }
 
-a:link {}
-
-a:visited {}
-
 a:hover {
     color: #070D59;
 }
-
-a:active {}
 
 ul {
     list-style: square;
@@ -42,7 +36,7 @@ button:hover {
     color: #070D59;
 }
 
-button#primaryBtn {
+#primary-button {
     background: #EE6F57;
     color: #F6F5F5;
     font-family: 'Bubblegum Sans';
@@ -52,7 +46,7 @@ button#primaryBtn {
     padding: 15px;
 }
 
-button#primaryBtn:hover {
+#primary-button:hover {
     background: #ee6157;
     cursor: pointer;
 }
@@ -179,7 +173,8 @@ button#primaryBtn:hover {
 .header-container,
 .about-container,
 .impact-container,
-.news-container {
+.news-container,
+.pledge-container {
     max-width: 1151px;
     margin: 350px auto;
 }
@@ -200,7 +195,7 @@ button#primaryBtn:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:flex-end;
+    justify-content: flex-end;
     list-style-type: none;
     max-width: 1151px;
     margin: 0 auto;
@@ -213,7 +208,8 @@ button#primaryBtn:hover {
 }
 
 .navigation ul li:nth-of-type(4) {
-    margin-left: auto; /* Align flex item to right */
+    margin-left: auto;
+    /* Align flex item to right */
 }
 
 .navigation ul li a {
@@ -234,7 +230,7 @@ button#primaryBtn:hover {
     text-decoration: none;
     padding: 10px;
     border-radius: 20px;
-    border: 2px dotted lightgrey;
+    border: 5px dashed lightgrey;
     margin-top: 0;
 }
 
@@ -283,4 +279,46 @@ button#primaryBtn:hover {
     border-radius: 20px;
     box-shadow: 0px 12px 28px 0px rgba(0, 0, 0, 0.568);
     margin-bottom: 30px;
+}
+
+/* ================================ Pledge styling ================================ */
+.pledge-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#pledge-button {
+    background: #EE6F57;
+    color: #F6F5F5;
+    font-family: 'Bubblegum Sans';
+    font-size: 0.75em;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#pledge-button:hover {
+    background: #ee6157;
+    cursor: pointer;
+}
+
+#pledge-form input {
+    font-family: 'Bubblegum Sans';
+    font-size: 1em;
+    width: 90%;
+    padding: 10px 10px;
+    margin: 15px 0;
+    border: 2px solid #1f3d8883;
+    border-radius: 7px;
+}
+
+#checkbox-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#checkbox-container .child:nth-of-type(2) {
+    padding-top: 11px;
 }

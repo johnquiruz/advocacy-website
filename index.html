@@ -14,7 +14,7 @@
     <!-- ====================================== Navigation ====================================== -->
     <div class="navigation">
         <ul>
-            <li><a href="https://google.com">Petition</a></li>
+            <li><a href="https://google.com">Pledge</a></li>
             <li><a href="https://google.com">Our Mission</a></li>
             <li><button id="theme-toggle">Toggle Theme</button></li>
             <li><a href="https://google.com">Become a Space Guardian</a></li>
@@ -34,7 +34,7 @@
                 all our future adventures.
             </h3>
 
-            <button type="button" id="primaryBtn">Become a Space Guardian</button>
+            <button type="button" id="primary-button">Become a Space Guardian</button>
         </div>
 
         <div class="child">
@@ -127,6 +127,49 @@
                     <p>We keep Earth's Space neighborhood tidy to welcome friendly visitors from far away!</p>
                 </div>
             </div>
+        </div>
+    </div>
+
+
+    <!-- ======================================== Pledge ======================================== -->
+    <div class="pledge-container">
+        <div class="child">
+            <h2>Space Guardian Pledge</h2>
+            <p>Dear future Space Guardian,</p>
+            <p>By taking this pledge, you promise to:</p>
+            <ol>
+                <li>Learn about keeping Space clean</li>
+                <li>Tell friends and family why Space is special</li>
+                <li>Care about Earth and the Space around it</li>
+                <li>Help others understand why clean Space matters</li>
+                <li>Be a hero for our planet's future!</li>
+            </ol>
+            <p>Join other Space Guardians who have already pledged to help</p>
+            <form id="pledge-form">
+                <label for="pledge-name">Name</label>
+                <input type="text" id="pledge-name" name="pledge-name">
+
+                <label for="pledge-age">Age</label>
+                <input type="text" id="pledge-age" name="pledge-age">
+
+                <label for="pledge-email">Parent/Guardian E-Mail</label>
+                <input type="text" id="pledge-email" name="pledge-email">
+
+                <div id="checkbox-container"> <!-- create flexbox to align checkbox and label -->
+                    <div class="child">
+                        <input type="checkbox" id="pledge-hero" name="pledge-hero" value="hero">
+                    </div>
+                    <div class="child">
+                        <label for="pledge-hero">&nbsp;<i>I want to be a
+                                <span style="text-decoration-line: underline; 
+                            text-decoration-style: dashed; text-decoration-color: lightgrey; 
+                            text-decoration-thickness: 5px;">Space Guardian</span>!</i>
+                        </label><br><br>
+                    </div>
+                </div>
+
+                <button id="pledge-button" type="button">Pledge</button>
+            </form>
         </div>
     </div>
 
