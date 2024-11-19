@@ -33,7 +33,14 @@ ul {
     list-style: square;
 }
 
-button {}
+button {
+    all: unset;
+    color: #1F3C88;
+}
+
+button:hover {
+    color: #070D59;
+}
 
 button#primaryBtn {
     background: #EE6F57;
@@ -57,7 +64,6 @@ button#primaryBtn:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: 2px dotted darkgrey;
 }
 
 .header-container .child {
@@ -84,7 +90,6 @@ button#primaryBtn:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    border: 2px dotted darkgrey;
 }
 
 .about-container .child {
@@ -105,7 +110,6 @@ button#primaryBtn:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 2px dotted lightgrey;
 }
 
 .data-container .child {
@@ -124,7 +128,6 @@ button#primaryBtn:hover {
 .impact-container {
     display: flex;
     flex-direction: column;
-    border: 2px dotted lightgrey;
 }
 
 .impact-container .child {
@@ -167,7 +170,6 @@ button#primaryBtn:hover {
 .news-container {
     display: flex;
     flex-direction: row;
-    border: 2px dotted lightgrey;
 }
 
 .news-container .child {
@@ -192,7 +194,6 @@ button#primaryBtn:hover {
     width: 100%;
     margin: 0;
     box-shadow: 0px 12px 18px 0px rgba(133, 133, 133, 0.171);
-    border: 2px dotted lightgrey;
 }
 
 .navigation ul {
@@ -204,7 +205,6 @@ button#primaryBtn:hover {
     max-width: 1151px;
     margin: 0 auto;
     padding: 30px 20px;
-    border: 2px dotted lightgrey;
 }
 
 .navigation ul li {
@@ -212,11 +212,12 @@ button#primaryBtn:hover {
     margin: 0 5px;
 }
 
-.navigation ul li:nth-of-type(3) {
+.navigation ul li:nth-of-type(4) {
     margin-left: auto; /* Align flex item to right */
 }
 
 .navigation ul li a {
+    display: inline-block;
     text-decoration: none;
     padding: 10px;
     border-radius: 20px;
@@ -225,4 +226,61 @@ button#primaryBtn:hover {
 
 .navigation ul li a:hover {
     background-color: #ee705728;
+}
+
+/* ================================ Toggle theme styling ================================ */
+.navigation ul li button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px dotted lightgrey;
+    margin-top: 0;
+}
+
+.navigation ul li button:hover {
+    background-color: #ee705728;
+    cursor: pointer;
+}
+
+.theme-mode {
+    background: #070D59;
+    color: #F6F5F5;
+}
+
+.theme-mode p {
+    color: #F6F5F5;
+}
+
+.theme-mode .navigation {
+    background: #070D59;
+    box-shadow: 0px 12px 18px 0px rgba(0, 0, 0, 0.541);
+}
+
+.theme-mode a {
+    color: #F6F5F5;
+}
+
+.theme-mode a:hover {
+    color: #c4c4c4;
+}
+
+.theme-mode button {
+    color: #F6F5F5;
+}
+
+.theme-mode .navigation ul li a:hover {
+    background-color: #ee705788;
+}
+
+.theme-mode .navigation ul li button:hover {
+    background-color: #ee705788;
+}
+
+.theme-mode .list-background {
+    background: #070D59;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 12px 28px 0px rgba(0, 0, 0, 0.568);
+    margin-bottom: 30px;
 }
