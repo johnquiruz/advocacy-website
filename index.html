@@ -14,7 +14,7 @@
     <!-- ====================================== Navigation ====================================== -->
     <div class="navigation">
         <ul>
-            <li><a href="https://google.com">Pledge</a></li>
+            <li><a href="#pledge">Pledge</a></li>
             <li><a href="https://google.com">Our Mission</a></li>
             <li><button id="theme-toggle">Toggle Theme</button></li>
             <li><a href="https://google.com">Become a Space Guardian</a></li>
@@ -123,24 +123,19 @@
                     <!-- Illustration 3 -->
                     <h3>Welcome, Space Friends!</h3>
                     <img src="./images/alien.jpg" title="Author: @catalyststuff - https://catalystvibes.dribbble.com/"
-                    alt="Cute Astronaut And Alien Eating Ice Cream Together">
+                        alt="Cute Astronaut And Alien Eating Ice Cream Together">
                     <p>We keep Earth's Space neighborhood tidy to welcome friendly visitors from far away!</p>
                 </div>
             </div>
         </div>
     </div>
-    
-    
+
+
     <!-- ======================================== Pledge ======================================== -->
     <div class="pledge-container">
         <div class="child">
             <h2>Recent Space Guardian Pledges</h2>
-            <P>Alex, age 8, just became a Space Guardian!</P>
-            <P>Space Guardian Emma, age 6, joined from California!</P>
-            <P>Welcome Jamie, age 10, our newest Guardian!</P>
-            <P>Maya, age 7, pledged to keep space clean!</P>
-            <P>Space Guardian Leo, age 9, joined the mission!</P>
-            <P>Welcome Sam, age 11, to our Guardian team!</P>
+            <div id="live-feed"></div>
         </div>
 
         <div class="child">
@@ -154,7 +149,7 @@
                 <li>Help others understand why clean Space matters</li>
                 <li>Be a hero for our planet's future!</li>
             </ol>
-            <p>Join <span style="font-weight: bold;">6</span> other Space Guardians who have already pledged to help</p>
+            <p>Join <span id="pledge-counter" style="font-weight: bold;">0</span> other Space Guardians who have already pledged to help</p>
             <form id="pledge-form">
                 <label for="pledge-name">Name</label>
                 <input type="text" id="pledge-name" name="pledge-name">
@@ -165,11 +160,11 @@
                 <label for="pledge-email">Parent/Guardian E-Mail</label>
                 <input type="text" id="pledge-email" name="pledge-email">
 
-                <div id="checkbox-container"> <!-- create flexbox to align checkbox and label -->
-                    <div class="child">
-                        <input type="checkbox" id="pledge-hero" name="pledge-hero" value="hero">
+                <div id="checkbox-container"> 
+                    <div class="child-2">
+                        <input type="checkbox" id="pledge-hero" name="pledge-hero" value="checked">
                     </div>
-                    <div class="child">
+                    <div class="child-2">
                         <label for="pledge-hero">&nbsp;<i>I want to be a
                                 <span style="text-decoration-line: underline; 
                             text-decoration-style: dashed; text-decoration-color: lightgrey; 
@@ -178,7 +173,8 @@
                     </div>
                 </div>
 
-                <button id="pledge-button" type="button">Pledge</button>
+                <div id="confirmation-message"></div><br>
+                <button id="pledge-button" type="submit">Pledge</button>
             </form>
         </div>
     </div>

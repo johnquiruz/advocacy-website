@@ -281,6 +281,10 @@ button:hover {
     margin-bottom: 30px;
 }
 
+.theme-mode .pledge-container .child {
+    box-shadow: 0px 12px 28px 0px rgba(0, 0, 0, 0.568);
+}
+
 /* ================================ Pledge styling ================================ */
 .pledge-container {
     display: flex;
@@ -290,7 +294,6 @@ button:hover {
 }
 
 .pledge-container .child {
-    border: 2px dashed lightblue;
     padding: 0 20px;
     padding-bottom: 20px;
     margin: 25px 0;
@@ -318,7 +321,7 @@ button:hover {
     font-size: 0.75em;
     border: none;
     border-radius: 10px;
-    padding: 15px;
+    padding: 15px 30px;
 }
 
 #pledge-button:hover {
@@ -341,11 +344,11 @@ button:hover {
     flex-direction: row;
 }
 
-#checkbox-container .child:nth-of-type(1) {
+#checkbox-container .child-2:nth-of-type(1) {
     flex: 0 1 1em;
 }
 
-#checkbox-container .child:nth-of-type(2) {
+#checkbox-container .child-2:nth-of-type(2) {
     padding-top: 11px;
     flex: 1 1 auto;
 }
