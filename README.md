@@ -30,6 +30,12 @@ Created by: John Quiruz
 - Use class selectors for repeating elements and ID selectors only for unique elements on the page
   - `class="..."` for many elements
   - `id="..."` for unique elements
+- Make sure to remove any dynamically added classes from HTML elements after they
+  have served their purpose. This includes resetting error flags after the errors have
+  been resolved
+- Make sure you use the correct forms of querySelector
+  - `.querySelector()`
+  - `.querySelectorAll()`
 
 ## License
 This is a personal project created for educational purposes.
