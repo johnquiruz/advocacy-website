@@ -19,14 +19,14 @@ let count = 0; // pledge counter starts at 0
 // a pledge form, updates a live feed of pledge recipients, and keeps
 // count of everyone who has pledged
 
-const addSignature = () => {
+const addSignature = (person) => {
     // -------------------- Dynamic confirmation message -----------------------------
     // Declare values from pledge form
-    const name = document.querySelector("#pledge-name").value;
-    const age = document.querySelector("#pledge-age").value;
+    // const name = document.querySelector("#pledge-name").value; // replaced by object "person"
+    // const age = document.querySelector("#pledge-age").value; // replaced by object "person"
 
     // Insert into pledge form a confirmation message after submission
-    const confirmMessage = "Hooray! Welcome to the team, " + name + ".";
+    const confirmMessage = "Hooray! Welcome to the team, " + person.name + ".";
     let confirmation = document.querySelector("#confirmation-message");
     confirmation.innerText = confirmMessage;
 
@@ -41,16 +41,16 @@ const addSignature = () => {
     let pledgeMessage = "";
 
     if (randomNum == 1) {
-        pledgeMessage = name + ", age " + age + ", just became a Space Guardian\n\n";
+        pledgeMessage = person.name + ", age " + person.age + ", just became a Space Guardian\n\n";
     }
     else if (randomNum == 2) {
-        pledgeMessage = "Space Guardian " + name + ", age " + age + ", has joined\n\n";
+        pledgeMessage = "Space Guardian " + person.name + ", age " + person.age + ", has joined\n\n";
     }
     else if (randomNum == 3) {
-        pledgeMessage = "Welcome " + name + ", age " + age + ", our newest Space Guardian\n\n";
+        pledgeMessage = "Welcome " + person.name + ", age " + person.age + ", our newest Space Guardian\n\n";
     }
     else if (randomNum == 4) {
-        pledgeMessage = name + ", age " + age + ", pledged to keep Space clean\n\n";
+        pledgeMessage = person.name + ", age " + person.age + ", pledged to keep Space clean\n\n";
     }
 
     // Add pledge message to the live feed
@@ -80,9 +80,14 @@ const validateForm = (event) => {
 
     let containsErrors = false; // error flag
     let pledgeInput = pledgeForm.elements; // store to check each input element
+    let person = {
+        name: pledgeInput[0].value,
+        age: pledgeInput[1].value,
+        email: pledgeInput[2].value
+    }
 
-    // Error if input fields contains less than 2 characters
-    for (let i = 0; i < pledgeInput.length - 1; ++i) {
+    // Error if input fields contains less than 1 characters
+    for (let i = 0; i < pledgeInput.length - 1; ++i) { // - 1 because of checkbox
         if (pledgeInput[i].value.length < 1) {
             containsErrors = true;
             pledgeInput[i].classList.add("error");
@@ -94,7 +99,7 @@ const validateForm = (event) => {
     // Error if email input field does not contain correct format
     const email = document.querySelector("#pledge-email");
 
-    if (!email.value.includes(".com")) {
+    if (!person.email.includes(".com")) {
         containsErrors = true;
         email.classList.add("error");
     } else {
@@ -113,7 +118,8 @@ const validateForm = (event) => {
 
     // Submit the form if there are no errors present
     if (!containsErrors) {
-        addSignature();
+        addSignature(person);
+        toggleModal(person);
         console.log("Form was successfully submitted.");
 
         // clear fields
@@ -161,3 +167,19 @@ const reveal = () => {
 }
 
 window.addEventListener('scroll', reveal);
+
+
+
+// ======================================= Toggle Modal ========================================
+const toggleModal = (person) => {
+    const modal = document.querySelector("#thanks-modal");
+    const modalContent = document.querySelector("#thanks-modal-content");
+
+    modal.style.display = "flex";
+    modalContent.innerHTML = `<p>Stellar! Thank you ${person.name}! Welcome to the Space Guardians!`;
+
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 4000)
+
+}
