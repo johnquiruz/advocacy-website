@@ -9,7 +9,6 @@ themeToggle.addEventListener("click", toggleTheme);
 
 
 
-
 // ======================================= Pledge Form ========================================
 const pledgeSubmit = document.querySelector("#pledge-button");
 let count = 0; // pledge counter starts at 0
@@ -63,7 +62,6 @@ const addSignature = () => {
     let numPledges = document.querySelector("#pledge-counter");
     count += 1;
     numPledges.innerText = count;
-
 }
 
 
