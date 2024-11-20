@@ -34,13 +34,13 @@ const addSignature = () => {
     // -------------------- Proliferate pledge live feed  -----------------------------
     // Declare signature list and create paragraph element for signature
     const liveFeed = document.querySelector("#live-feed");
-    const signature = document.createElement("p"); 
+    const signature = document.createElement("p");
 
     // Randomize pledge message to be added to the live feed
     let randomNum = Math.floor(Math.random() * (4) + 1);
     let pledgeMessage = "";
 
-    if (randomNum == 1) {       
+    if (randomNum == 1) {
         pledgeMessage = name + ", age " + age + ", just became a Space Guardian\n\n";
     }
     else if (randomNum == 2) {
@@ -77,10 +77,10 @@ const validateForm = (event) => {
     // Cannot display confirmation message until a valid input is submitted
     let confirmation = document.querySelector("#confirmation-message");
     confirmation.innerText = "";
-    
+
     let containsErrors = false; // error flag
     let pledgeInput = pledgeForm.elements; // store to check each input element
-    
+
     // Error if input fields contains less than 2 characters
     for (let i = 0; i < pledgeInput.length - 1; ++i) {
         if (pledgeInput[i].value.length < 1) {
@@ -90,10 +90,10 @@ const validateForm = (event) => {
             pledgeInput[i].classList.remove("error");
         }
     }
-    
+
     // Error if email input field does not contain correct format
     const email = document.querySelector("#pledge-email");
-    
+
     if (!email.value.includes(".com")) {
         containsErrors = true;
         email.classList.add("error");
@@ -110,22 +110,20 @@ const validateForm = (event) => {
     } else {
         pledged.classList.remove("error");
     }
-    
+
     // Submit the form if there are no errors present
     if (!containsErrors) {
         addSignature();
         console.log("Form was successfully submitted.");
-        
+
         // clear fields
         for (let i = 0; i < pledgeInput.length; i++) {
             if (pledgeInput[i].type === "checkbox") {
-                console.log(pledgeInput[i].checked)
-                pledgeInput[i].checked = false;
-                console.log(pledgeInput[i].checked)
+                pledgeInput[i].checked = false; // reset checkbox
             } else {
                 pledgeInput[i].value = "";
             }
-            pledgeInput[i].classList.remove("error");
+            pledgeInput[i].classList.remove("error"); // reset error class
         }
     } else {
         console.log("Form was not submitted.");
@@ -133,3 +131,6 @@ const validateForm = (event) => {
 }
 
 pledgeSubmit.addEventListener("click", validateForm); // validate form and submit if there are no errors
+
+
+

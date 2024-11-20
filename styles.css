@@ -352,3 +352,11 @@ button:hover {
     padding-top: 11px;
     flex: 1 1 auto;
 }
+
+/* ================================ Error styling ================================ */
+
+.error {
+    border: 2px solid red;
+    background: pink;
+    outline: 1px auto red;
+}
