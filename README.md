@@ -4,7 +4,7 @@ Created by: John Quiruz
 
 **Space Guardians** is a website that seeks to spread awareness about the growing problem of space junk accumulating in Earth's orbit. This website is intended for young readers.
 
-<img src='https://imgur.com/a/pf32ypk' />
+<img src='./images/advocacy-website-walkthrough.gif' />
 
 ## Features
 
